@@ -1,0 +1,156 @@
+.navbar-brand p {
+  margin: 3px 0 0 0;
+}
+
+.navbar-brand i {
+  float: left;
+  margin-right: 5px;
+}
+
+.bg-light {
+  background-color: #f0f0f0 !important;
+}
+
+.btn:hover {
+  background-color: #7a7a7a;
+  border-color: white;
+}
+
+header {
+  margin-top: 15px;
+}
+
+.side-menu {
+  padding: 0;
+  height: 400px;
+  background-color: #f0f0f0;
+}
+
+.side-menu ul {
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 10.2px;
+  list-style-type: none;
+}
+
+.side-menu ul li:hover {
+  background-color: #7a7a7a;
+  color: white;
+}
+
+.side-menu ul .submenu li {
+  padding-left: 30px;
+}
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 300%;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: initial;
+}
+
+.btn-outline-success {
+  color: #7ac229;
+  border-color: #7ac229;
+}
+
+.product {
+  padding: 10px;
+}
+
+.product .product-card {
+  text-align: center;
+}
+
+.product .product-card img {
+  width: 100%;
+}
+
+.product .product-card h6 {
+  margin-top: 5px;
+  margin-bottom: 1px;
+}
+
+.product .product-card p {
+  color: lightgray;
+}
+
+.product .product-card .progress {
+  height: 5px;
+}
+
+.product .product-card .progress-bar {
+  background-color: #7ac229;
+}
+
+.product .product-card .w-25 {
+  background-color: red;
+}
+
+.product .product-card .w-50 {
+  background-color: yellow;
+}
+
+.product .product-card .w-75 {
+  background-color: yellowgreen;
+}
+
+.product .product-card h5 {
+  margin-top: 10px;
+}
+
+.product .product-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.rules {
+  margin: 70px auto;
+  text-align: center;
+}
+
+.lower-footer {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  background-color: #f0f0f0;
+}
+
+.lower-footer h6 {
+  font-weight: bold;
+}
+
+.lower-footer .fa {
+  margin: 10px;
+}
+
+.lower-footer .fa-mobile {
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+.lower-footer .kontakt {
+  text-align: center;
+}
+
+@media screen and (max-width: 755px) {
+  .navbar {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=main.css.map */
