@@ -16,11 +16,11 @@
 
     <title>Marcin-Hurt</title>
 </head>
-<body>
+<body onload="hideAllExceptSpecial()">
     <!-- top navbar -->
     <nav class="navbar navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#">
-            <i class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
+        <a onclick="" class="navbar-brand" href="#">
+            <i onclick="hideAllExceptSpecial()" class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
             <p>Hurtownia Marcina</p>
         </a>
         <form class="form-inline">
@@ -36,16 +36,16 @@
                 <!-- nowości, promocje, produkty - kategorie, kontakt, dostawa, pomoc -->
                 <div class="side-menu col-md-2">
                     <ul>
-                        <a href="#"><li>Nowości</li></a>
-                        <a href="#"><li>Promocje</li></a>
-                        <a href="#"><li>Produkty <i class="fa fa-angle-down" aria-hidden="true"></i></li></a>
+                        <a onclick="showNew()"><li>Nowości</li></a>
+                        <a onclick="showPromo()"><li>Promocje</li></a>
+                        <a onclick="showProductsAll()"><li>Produkty <i class="fa fa-angle-down" aria-hidden="true"></i></li></a>
                             <div class="submenu">
-                                <a href="#"><li>Militarne</li></a>
-                                <a href="#"><li>Zabawki</li></a>
-                                <a href="#"><li>Gadżety</li></a>
+                                <a onclick="showMilitary()"><li>Militarne</li></a>
+                                <a onclick="showToys()"><li>Zabawki</li></a>
+                                <a onclick="showGadgets()"><li>Gadżety</li></a>
                             </div>
-                        <a href="#"><li>Dostawa</li></a>
-                        <a href="#"><li>Pomoc</li></a>
+                        <a href="#shipping"><li>Dostawa</li></a>
+                        <a href="#help"><li>Pomoc</li></a>
                         <a href="#contact"><li>Kontakt</li></a>
                     </ul>
                 </div>
@@ -83,9 +83,9 @@
 
     </header>
     <main>
-        <!-- new -->
-        <section id="new-main">
-            <h2>Nasze nowości</h2>
+        <!-- special -->
+        <section id="special">
+            <h2>Specjalnie dla Ciebie</h2>
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-sm-4 col-md-3 product">
@@ -103,12 +103,60 @@
                     <div class="col-6 col-sm-4 col-md-3 product">
                         <div class="product-card">
                             <img src="./images/war.jpg" alt="zdjęcie produktu">
-                            <h6>Raca sygnałowa, czerwona</h6>
+                            <h6>Raca sygnałowa</h6>
                             <p>AmuNation</p>
                             <div class="progress">
                                 <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/wristwatch.jpg" alt="zdjęcie produktu">
+                            <h6>Zegarek męski</h6>
+                            <p>Elegance</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>159,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft4.jpg" alt="zdjęcie produktu">
+                            <h6>Luneta do snajperki</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>79,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/blocks.jpg" alt="zdjęcie produktu">
+                            <h6>Klocki plastikowe</h6>
+                            <p>Bro Blocks</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/drone.jpg" alt="zdjęcie produktu">
+                            <h6>Dron latający</h6>
+                            <p>Fly Word</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>709,99 zł</h5>
                             <button>Dodaj do koszyka</button>
                         </div>
                     </div>
@@ -121,6 +169,78 @@
                                 <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <h5>339,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/camouflage.jpg" alt="zdjęcie produktu">
+                            <h6>Magazynek zapasowy</h6>
+                            <p>AmuNation</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>49,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- produkty -->   
+        <!-- kategoria -->
+
+        <!-- nowości -->
+        <section id="news">
+            <h2>Nowości</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/watergun.jpg" alt="zdjęcie produktu">
+                            <h6>Tuba wodna</h6>
+                            <p>WaterFun</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/drone.jpg" alt="zdjęcie produktu">
+                            <h6>Dron latający</h6>
+                            <p>Fly Word</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>709,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft2.jpg" alt="zdjęcie produktu">
+                            <h6>Kamuflarz leśny</h6>
+                            <p>Camo</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>39,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/wristwatch.jpg" alt="zdjęcie produktu">
+                            <h6>Zegarek męski</h6>
+                            <p>Elegance</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>159,99 zł</h5>
                             <button>Dodaj do koszyka</button>
                         </div>
                     </div>
@@ -140,11 +260,103 @@
             </div>
         </section>
 
-        <!-- promo -->
-        <section id="promo-main">
-            <h2>Promocje!</h2>
+        <!-- promocje -->
+        <section id="promo">
+            <h2>Promocje</h2>
             <div class="container">
                 <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft3.jpg" alt="zdjęcie produktu">
+                            <h6>Karabin ASG</h6>
+                            <p>Shots</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/teddy.jpg" alt="zdjęcie produktu">
+                            <h6>Przytulanka, miś</h6>
+                            <p>Give Love</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>45,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft4.jpg" alt="zdjęcie produktu">
+                            <h6>Luneta do snajperki</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>79,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/camouflage.jpg" alt="zdjęcie produktu">
+                            <h6>Magazynek zapasowy</h6>
+                            <p>AmuNation</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>49,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/shield.jpg" alt="zdjęcie produktu">
+                            <h6>Szkło hartowane</h6>
+                            <p>Hard Shield</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft.jpg" alt="zdjęcie produktu">
+                            <h6>Karabin ASG</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>89,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="military">
+            <h2>Militarne</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft.jpg" alt="zdjęcie produktu">
+                            <h6>Karabin ASG</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>89,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
                     <div class="col-6 col-sm-4 col-md-3 product">
                         <div class="product-card">
                             <img src="./images/airsoft2.jpg" alt="zdjęcie produktu">
@@ -162,6 +374,90 @@
                             <img src="./images/airsoft3.jpg" alt="zdjęcie produktu">
                             <h6>Karabin ASG</h6>
                             <p>Shots</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/war.jpg" alt="zdjęcie produktu">
+                            <h6>Raca sygnałowa</h6>
+                            <p>AmuNation</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft4.jpg" alt="zdjęcie produktu">
+                            <h6>Luneta do snajperki</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>79,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/camouflage.jpg" alt="zdjęcie produktu">
+                            <h6>Magazynek zapasowy</h6>
+                            <p>AmuNation</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>49,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft.jpg" alt="zdjęcie produktu">
+                            <h6>Karabin ASG</h6>
+                            <p>ASG Poland</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>89,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft2.jpg" alt="zdjęcie produktu">
+                            <h6>Kamuflarz leśny</h6>
+                            <p>Camo</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>39,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/airsoft3.jpg" alt="zdjęcie produktu">
+                            <h6>Karabin ASG</h6>
+                            <p>Shots</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/war.jpg" alt="zdjęcie produktu">
+                            <h6>Raca sygnałowa</h6>
+                            <p>AmuNation</p>
                             <div class="progress">
                                 <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
@@ -197,32 +493,298 @@
             </div>
         </section>
 
-        <!-- produkty -->   
-        <!-- kategoria -->
-        <section id="military">
-
-        </section>
-
         <!-- kategoria -->
         <section id="toys">
-            
+            <h2>Zabawki</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/teddy.jpg" alt="zdjęcie produktu">
+                            <h6>Przytulanka, miś</h6>
+                            <p>Give Love</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>45,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/watergun.jpg" alt="zdjęcie produktu">
+                            <h6>Tuba wodna</h6>
+                            <p>WaterFun</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/water-balloons2.jpg" alt="zdjęcie produktu">
+                            <h6>Kula wodna</h6>
+                            <p>WaterFun</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>339,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/barbie.jpg" alt="zdjęcie produktu">
+                            <h6>Lalka Barbie</h6>
+                            <p>Barbie</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/tricycle.jpg" alt="zdjęcie produktu">
+                            <h6>Rower trójkołowy</h6>
+                            <p>Ride with Us</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>199,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/blocks.jpg" alt="zdjęcie produktu">
+                            <h6>Klocki plastikowe</h6>
+                            <p>Bro Blocks</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/teddy.jpg" alt="zdjęcie produktu">
+                            <h6>Przytulanka, miś</h6>
+                            <p>Give Love</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>45,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/watergun.jpg" alt="zdjęcie produktu">
+                            <h6>Tuba wodna</h6>
+                            <p>WaterFun</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/water-balloons2.jpg" alt="zdjęcie produktu">
+                            <h6>Kula wodna</h6>
+                            <p>WaterFun</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>339,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/barbie.jpg" alt="zdjęcie produktu">
+                            <h6>Lalka Barbie</h6>
+                            <p>Barbie</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/tricycle.jpg" alt="zdjęcie produktu">
+                            <h6>Rower trójkołowy</h6>
+                            <p>Ride with Us</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>199,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/blocks.jpg" alt="zdjęcie produktu">
+                            <h6>Klocki plastikowe</h6>
+                            <p>Bro Blocks</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>99,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- kategoria -->
         <section id="gadgets">
-            
+            <h2>Gadżety</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/drone.jpg" alt="zdjęcie produktu">
+                            <h6>Dron latający</h6>
+                            <p>Fly Word</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>709,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/manlyman.jpg" alt="zdjęcie produktu">
+                            <h6>Akcesoria męskie</h6>
+                            <p>Man man man</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>139,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/shield.jpg" alt="zdjęcie produktu">
+                            <h6>Szkło hartowane</h6>
+                            <p>Hard Shield</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/vr.jpg" alt="zdjęcie produktu">
+                            <h6>Okulary VR</h6>
+                            <p>PS5</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>859,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/wristwatch.jpg" alt="zdjęcie produktu">
+                            <h6>Zegarek męski</h6>
+                            <p>Elegance</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>159,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/drone.jpg" alt="zdjęcie produktu">
+                            <h6>Dron latający</h6>
+                            <p>Fly Word</p>
+                            <div class="progress">
+                                <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>709,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/manlyman.jpg" alt="zdjęcie produktu">
+                            <h6>Akcesoria męskie</h6>
+                            <p>Man man man</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>139,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/shield.jpg" alt="zdjęcie produktu">
+                            <h6>Szkło hartowane</h6>
+                            <p>Hard Shield</p>
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>9,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/vr.jpg" alt="zdjęcie produktu">
+                            <h6>Okulary VR</h6>
+                            <p>PS5</p>
+                            <div class="progress">
+                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>859,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 product">
+                        <div class="product-card">
+                            <img src="./images/wristwatch.jpg" alt="zdjęcie produktu">
+                            <h6>Zegarek męski</h6>
+                            <p>Elegance</p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h5>159,99 zł</h5>
+                            <button>Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- dostawa -->
-        <section id="shipping">
-            
-        </section>
-
-        <!-- pomoc -->
-        <section id="help">
-            
-        </section>
-
+        <!-- form -->
+        <div id="form" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form>
+                        <p>test formularza</p>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!-- zadowolenie, szybka wysyłka, prezenty dla stałych klientów -->
@@ -241,27 +803,30 @@
         </div>
         <div class="container-fluid">
             <div class="row lower-footer">
+                <section id="help"></section>
                 <div class="col-sm-4">
-                    <h6>Linki</h6>
+                    <h6>Pomoc</h6>
+                    <p>W przypadku wszelkich problemów z zamówniem prosimy o kontakt telefoniczny lub poprzez formularz kontaktowy.</p>
+                    <a href="#" onclick="showForm()"><p>Formularz</p></a>
                 </div>
                 <!-- regulaminy -->
+                <section id="shipping"></section>
                 <div class="col-sm-4">
-                    <h6>Regulamin</h6>
-                    <br/>
-                    <p>Przed dokonaniem zakupu prosimy o zapoznanie się z regulaminem sklepu.</p>
-                    <a href="#"><p>Link do regulaminu</p></a>
+                    <h6>Dostawa</h6>
+                    <p>Szanowny Kliencie, wysyłki dokonujemy w możliwie najkrótszym czasie, po otrzyaniu wpłaty. Przed dokonaniem zakupu prosimy o zapoznanie się z regulaminem sklepu.</p>
+                    <a href="./Regulamin sklepu internetowego.txt" target="blank"><p>Link do regulaminu</p></a>
                 </div>
                 <!-- kontakt, tel, facebook,  -->
                 <section id="contact"></section>
                 <div class="col-sm-4 kontakt">
                     <h6>Kontakt</h6>
                     <div class="facebook">
-                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                        <a href="https://www.facebook.com/marcin.juszczynski.5" target="blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
                         <p>Dodaj nas do znajomych</p>
                     </div>
                     <div class="phone">
-                        <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
-                        <p>Telefon czynny od 8.00 do 18.00</p>
+                        <a href="tel:+48600822463"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+                        <p>+48 600 822 463</a><br/>Telefon czynny od 8.00 do 18.00</p>
                     </div>
                 </div>
             </div>

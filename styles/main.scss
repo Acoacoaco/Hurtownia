@@ -30,20 +30,21 @@ header {
 
 .side-menu {
     padding: 0;
-    height: 400px;
+    height: 376px;
     background-color: rgb(240, 240, 240);
     ul {
         padding: 0;
         li {
-            padding: 10.2px;
+            padding: 8.9px 30px;
             list-style-type: none;
             &:hover {
                 background-color: rgb(122, 122, 122);
                 color: white;
+                cursor: pointer;
             }
         }
         .submenu li {
-            padding-left: 30px;
+            padding-left: 50px;
         }
     }
 
@@ -82,7 +83,7 @@ a, a:hover {
 // product
 
 .product {
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     .product-card {
         img {
             width: 100%;
@@ -154,6 +155,9 @@ a, a:hover {
     .kontakt {
         text-align: center;
     }
+    // a {
+    //     cursor: pointer;
+    // }
 }
 
 @media screen and (max-width: 755px) {

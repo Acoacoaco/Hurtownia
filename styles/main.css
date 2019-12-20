@@ -22,7 +22,7 @@ header {
 
 .side-menu {
   padding: 0;
-  height: 400px;
+  height: 376px;
   background-color: #f0f0f0;
 }
 
@@ -31,17 +31,18 @@ header {
 }
 
 .side-menu ul li {
-  padding: 10.2px;
+  padding: 8.9px 30px;
   list-style-type: none;
 }
 
 .side-menu ul li:hover {
   background-color: #7a7a7a;
   color: white;
+  cursor: pointer;
 }
 
 .side-menu ul .submenu li {
-  padding-left: 30px;
+  padding-left: 50px;
 }
 
 .carousel-inner {
@@ -70,7 +71,7 @@ a, a:hover {
 }
 
 .product {
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
 }
 
 .product .product-card {
