@@ -11,6 +11,11 @@
   background-color: #f0f0f0 !important;
 }
 
+.form-control {
+  display: inline-block;
+  width: auto;
+}
+
 .btn:hover {
   background-color: #7a7a7a;
   border-color: white;
@@ -22,17 +27,29 @@ header {
 
 .side-menu {
   padding: 0;
-  height: 376px;
   background-color: #f0f0f0;
 }
 
 .side-menu ul {
   padding: 0;
+  margin-bottom: 0;
+  height: 100%;
 }
 
 .side-menu ul li {
-  padding: 8.9px 30px;
+  height: 11.11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style-type: none;
+  padding-left: 10px;
 }
 
 .side-menu ul li:hover {
@@ -41,8 +58,17 @@ header {
   cursor: pointer;
 }
 
+.side-menu ul li i {
+  padding-left: 10px;
+}
+
+.side-menu ul .submenu {
+  height: 33.33%;
+}
+
 .side-menu ul .submenu li {
   padding-left: 50px;
+  height: 33.33%;
 }
 
 .carousel-inner {
@@ -57,7 +83,6 @@ section h2 {
   font-size: 300%;
   text-align: center;
   margin-top: 15px;
-  margin-left: 20px;
 }
 
 a, a:hover {
@@ -149,9 +174,48 @@ a, a:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 768px) {
   .navbar {
     position: relative;
+  }
+  .rules {
+    margin: 10px auto;
+  }
+  .side-menu ul li {
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .side-menu ul li i {
+    position: relative;
+    left: 40px;
+    top: -19px;
+  }
+  .side-menu ul .submenu li {
+    padding-left: 0;
+  }
+  .carousel-inner {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+  .navbar .form-inline {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .lower-footer .help, .lower-footer .shipping, .lower-footer .kontakt {
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=main.css.map */

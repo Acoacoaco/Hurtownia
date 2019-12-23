@@ -61,5 +61,4 @@ function showGadgets() {
 function showForm() {
     hideAll();
     form.hidden = false;
-    
 }
