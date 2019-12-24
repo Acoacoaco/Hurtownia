@@ -1,64 +1,75 @@
 // varaibles
-const special = document.getElementById('special');
-const news = document.getElementById('news');
-const promo = document.getElementById('promo');
-const military = document.getElementById('military');
-const toys = document.getElementById('toys');
-const gadgets = document.getElementById('gadgets');
-const form = document.getElementById('form');
-           
-// function onload
-function hideAllExceptSpecial() {
-    special.hidden = false;
-    news.hidden = true;
-    promo.hidden = true;
-    military.hidden = true;
-    toys.hidden = true;
-    gadgets.hidden = true;
-    form.hidden = true;
-}
 
+const allProducts = document.getElementsByClassName('product');
+const newProducts = document.getElementsByClassName('new');
+const promoProducts = document.getElementsByClassName('promo');
+const militaryProducts = document.getElementsByClassName('military');
+const toysProducts = document.getElementsByClassName('toys');
+const gadgetsProducts = document.getElementsByClassName('gadgets');
+const mainTitle = document.getElementById('main-title');
+const formSubpage = document.getElementById('form');
+           
+// onload
+formSubpage.hidden = true;
 
 // JS functions
 function hideAll() {
-    hideAllExceptSpecial();
-    special.hidden = true;
+    for (x=0; x < allProducts.length; x++) {
+        allProducts[x].hidden = true;
+    }
 }
 
-// onclick functions
+// onclick 
+
 function showNew() {
     hideAll();
-    news.hidden = false;
+    mainTitle.innerHTML = 'Nowości';
+    for (x=0; x < newProducts.length; x++) {
+        newProducts[x].hidden = false;
+    }
 }
 
 function showPromo() {
     hideAll();
-    promo.hidden = false;
+    mainTitle.innerHTML = 'Promocje';
+    for (x=0; x < promoProducts.length; x++) {
+        promoProducts[x].hidden = false;
+    }
 }
 
-function showProductsAll() {
-    hideAll();
-    military.hidden = false;
-    toys.hidden = false;
-    gadgets.hidden = false;
+function showAllProducts() {
+    mainTitle.innerHTML = 'Wszystkie produkty';
+    for (x=0; x < allProducts.length; x++) {
+        allProducts[x].hidden = false;
+    }
 }
 
 function showMilitary() {
     hideAll();
-    military.hidden = false;
+    mainTitle.innerHTML = 'Militarne';
+    for (x=0; x < militaryProducts.length; x++) {
+        militaryProducts[x].hidden = false;
+    }
 }
 
 function showToys() {
     hideAll();
-    toys.hidden = false;
+    mainTitle.innerHTML = 'Zabawki';
+    for (x=0; x < toysProducts.length; x++) {
+        toysProducts[x].hidden = false;
+    }
 }
 
-function showGadgets() {
+function showGagets() {
     hideAll();
-    gadgets.hidden = false;
+    mainTitle.innerHTML = 'Gadżety';
+    for (x=0; x < gadgetsProducts.length; x++) {
+        gadgetsProducts[x].hidden = false;
+    }
 }
 
 function showForm() {
     hideAll();
-    form.hidden = false;
+    mainTitle.innerHTML = 'Formularz zgłoszenia';
+    formSubpage.hidden = false;
 }
