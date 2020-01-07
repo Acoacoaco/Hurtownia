@@ -16,9 +16,9 @@
   width: auto;
 }
 
-.btn:hover {
-  background-color: #7a7a7a;
-  border-color: white;
+form i:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
 }
 
 header {

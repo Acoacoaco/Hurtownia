@@ -16,7 +16,7 @@
 
     <title>Marcin-Hurt</title>
 </head>
-<body>
+<body onload="showNew()">
     <!-- top navbar -->
     <nav class="navbar navbar-light bg-light sticky-top">
         <a onclick="window.location.reload();" class="navbar-brand" href="#">
@@ -25,7 +25,7 @@
         </a>
         <form class="form-inline">
             <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Wpisz nazwę produktu" aria-label="Search">
-            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="search()"><i class="fa fa-search"></i></button>
+            <i onclick="productSearch()" class="fa fa-search"></i>
         </form>
         <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
     </nav>
@@ -84,9 +84,9 @@
 
     </header>
     <main>
-        <h2 id="main-title">Specjalnie dla Ciebie</h2>
+        <h2 id="main-title"></h2>
         <div class="container">
-            <div class="row">
+            <div class="row" id="all-products">
                 <div class="col-6 col-sm-4 col-md-3 product gadgets promo">
                     <div class="product-card">
                         <img src="./images/shield.jpg" alt="zdjęcie produktu">
@@ -147,7 +147,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product special toys new">
+                <div class="col-6 col-sm-4 col-md-3 product toys new">
                     <div class="product-card">
                         <img src="./images/watergun.jpg" alt="zdjęcie produktu">
                         <h6>Tuba wodna</h6>
@@ -207,7 +207,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product toys special">
+                <div class="col-6 col-sm-4 col-md-3 product toys">
                     <div class="product-card">
                         <img src="./images/water-balloons2.jpg" alt="zdjęcie produktu">
                         <h6>Kula wodna</h6>
@@ -219,7 +219,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product military special">
+                <div class="col-6 col-sm-4 col-md-3 product military">
                     <div class="product-card">
                         <img src="./images/war.jpg" alt="zdjęcie produktu">
                         <h6>Raca sygnałowa</h6>
@@ -231,7 +231,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product toys special">
+                <div class="col-6 col-sm-4 col-md-3 product toys">
                     <div class="product-card">
                         <img src="./images/blocks.jpg" alt="zdjęcie produktu">
                         <h6>Klocki plastikowe</h6>
@@ -243,7 +243,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product new gadgets special">
+                <div class="col-6 col-sm-4 col-md-3 product new gadgets">
                     <div class="product-card">
                         <img src="./images/drone.jpg" alt="zdjęcie produktu">
                         <h6>Dron latający</h6>
@@ -255,7 +255,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product military special promo">
+                <div class="col-6 col-sm-4 col-md-3 product military promo">
                     <div class="product-card">
                         <img src="./images/airsoft4.jpg" alt="zdjęcie produktu">
                         <h6>Luneta do snajperki</h6>
@@ -267,7 +267,7 @@
                         <button>Dodaj do koszyka</button>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 product military special promo">
+                <div class="col-6 col-sm-4 col-md-3 product military promo">
                     <div class="product-card">
                         <img src="./images/camouflage.jpg" alt="zdjęcie produktu">
                         <h6>Magazynek zapasowy</h6>
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 
-                <div class="col-6 col-sm-4 col-md-3 product gadgets special new">
+                <div class="col-6 col-sm-4 col-md-3 product gadgets new">
                     <div class="product-card">
                         <img src="./images/wristwatch.jpg" alt="zdjęcie produktu">
                         <h6>Zegarek męski</h6>

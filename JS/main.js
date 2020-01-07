@@ -73,3 +73,13 @@ function showForm() {
     mainTitle.innerHTML = 'Formularz zgłoszenia';
     formSubpage.hidden = false;
 }
+
+// search
+
+function productSearch() {
+    // showAllProducts(); chyba nie musi być!
+    mainTitle.innerHTML = 'Oto wynik Twojego wyszukiwania:';
+    const searchInput = document.getElementById('myInput').value.toUpperCase();
+    
+    alert(searchInput);
+}
