@@ -16,6 +16,7 @@ formSubpage.style.display = "none";
 function hideAll() {
     for (x=0; x < allProducts.length; x++) {
         allProducts[x].style.display = "none";
+        formSubpage.style.display = "none";
     }
 }
 
