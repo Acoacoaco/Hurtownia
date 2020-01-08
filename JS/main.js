@@ -10,12 +10,12 @@ const mainTitle = document.getElementById('main-title');
 const formSubpage = document.getElementById('form');
            
 // onload
-formSubpage.hidden = true;
+formSubpage.style.display = "none";
 
 // JS functions
 function hideAll() {
     for (x=0; x < allProducts.length; x++) {
-        allProducts[x].hidden = true;
+        allProducts[x].style.display = "none";
     }
 }
 
@@ -25,7 +25,7 @@ function showNew() {
     hideAll();
     mainTitle.innerHTML = 'Nowości';
     for (x=0; x < newProducts.length; x++) {
-        newProducts[x].hidden = false;
+        newProducts[x].style.display = "";
     }
 }
 
@@ -33,14 +33,14 @@ function showPromo() {
     hideAll();
     mainTitle.innerHTML = 'Promocje';
     for (x=0; x < promoProducts.length; x++) {
-        promoProducts[x].hidden = false;
+        promoProducts[x].style.display = "";
     }
 }
 
 function showAllProducts() {
     mainTitle.innerHTML = 'Wszystkie produkty';
     for (x=0; x < allProducts.length; x++) {
-        allProducts[x].hidden = false;
+        allProducts[x].style.display = "";
     }
 }
 
@@ -48,7 +48,7 @@ function showMilitary() {
     hideAll();
     mainTitle.innerHTML = 'Militarne';
     for (x=0; x < militaryProducts.length; x++) {
-        militaryProducts[x].hidden = false;
+        militaryProducts[x].style.display = "";
     }
 }
 
@@ -56,7 +56,7 @@ function showToys() {
     hideAll();
     mainTitle.innerHTML = 'Zabawki';
     for (x=0; x < toysProducts.length; x++) {
-        toysProducts[x].hidden = false;
+        toysProducts[x].style.display = "";
     }
 }
 
@@ -64,22 +64,47 @@ function showGagets() {
     hideAll();
     mainTitle.innerHTML = 'Gadżety';
     for (x=0; x < gadgetsProducts.length; x++) {
-        gadgetsProducts[x].hidden = false;
+        gadgetsProducts[x].style.display = "";
     }
 }
 
 function showForm() {
     hideAll();
     mainTitle.innerHTML = 'Formularz zgłoszenia';
-    formSubpage.hidden = false;
+    formSubpage.style.display = "";
 }
 
 // search
 
 function productSearch() {
-    // showAllProducts(); chyba nie musi być!
-    mainTitle.innerHTML = 'Oto wynik Twojego wyszukiwania:';
-    const searchInput = document.getElementById('myInput').value.toUpperCase();
-    
-    alert(searchInput);
+    showAllProducts();
+    mainTitle.innerHTML = 'Nie mamy przedmiotu o takiej nazwie. <br> Szukaj dalej ;)';
+    // Declare variables
+    var searchInput, ul, li, productName, i, txtValue;
+    searchInput = document.getElementById('myInput').value.toUpperCase();
+    productName = document.getElementById('product-name');
+    ul = document.getElementById('all-products');
+    li = ul.getElementsByClassName('product');    
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      productName = li[i].getElementsByClassName('product-name')[0];
+      txtValue = productName.textContent || productName.innerText;
+      if (txtValue.toUpperCase().indexOf(searchInput) > -1) {
+        li[i].style.display = "";
+        mainTitle.innerHTML = 'Oto wynik Twojego wyszukiwania:';
+      } else {
+        li[i].style.display = "none";
+      }
+    }
 }
+
+// enter key search
+
+var input = document.getElementById('myInput');
+input.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById('search-icon').click();
+  }
+});

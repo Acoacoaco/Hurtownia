@@ -16,9 +16,13 @@
   width: auto;
 }
 
-form i:hover {
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
+.fa-search {
+  margin-left: 5px;
+}
+
+nav i:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 header {
