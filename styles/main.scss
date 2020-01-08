@@ -25,6 +25,8 @@
 
 .fa-search {
     margin-left: 5px;
+    position: relative;
+    top: -1px;
 }
 
 nav i:hover {
@@ -174,6 +176,8 @@ a, a:hover {
     .side-menu {
         ul {
             li {
+                padding-top: 5px;
+                padding-bottom: 5px;
                 padding-left: 0;
                 flex-direction: column;
                 i {
@@ -204,6 +208,10 @@ a, a:hover {
             margin-top: 5px;
             margin-bottom: 15px;
         }
+    }
+    .fa-search {
+        position: relative;
+        top: 5px;
     }
 }
 

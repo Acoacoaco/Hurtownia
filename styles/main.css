@@ -18,6 +18,8 @@
 
 .fa-search {
   margin-left: 5px;
+  position: relative;
+  top: -1px;
 }
 
 nav i:hover {
@@ -182,6 +184,8 @@ a, a:hover {
     margin: 10px auto;
   }
   .side-menu ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -212,6 +216,10 @@ a, a:hover {
     display: block;
     margin-top: 5px;
     margin-bottom: 15px;
+  }
+  .fa-search {
+    position: relative;
+    top: 5px;
   }
 }
 
