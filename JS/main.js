@@ -23,19 +23,15 @@ function hideAll() {
 // onclick 
 
 function menuSlide() {
-    const body = document.getElementById('all');
-    const carouselMargin = document.getElementById('carousel1');
+    const sideMenu = document.getElementById('product-menu');
     const searchBar = document.getElementById('search-bar');
     const basket = document.getElementById('basket'); 
-
-    if (body.style.top !== '0px') {
-        body.style.top = '0px';
-        carouselMargin.style.marginTop = '10px';
+    if (sideMenu.style.display == 'none') {
+        sideMenu.style.display = 'initial';
         searchBar.style.display = 'block';
-        basket.style.display = 'block';
+        basket.style.display = 'inline-block';
     } else {
-        body.style.top = '-350px';
-        carouselMargin.style.marginTop = '27px';
+        sideMenu.style.display = 'none';
         searchBar.style.display = 'none';
         basket.style.display = 'none';
     }

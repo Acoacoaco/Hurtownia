@@ -185,21 +185,36 @@ a, a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    position: relative;
-    top: -350px;
+  header {
+    margin-top: 0;
   }
   .navbar .hamburger {
     display: inline !important;
   }
-  .navbar .form-inline, .navbar .fa-shopping-basket {
+  .navbar .form-inline {
     display: none;
     width: 100vw;
+    text-align: center;
+  }
+  .navbar .form-inline #myInput {
+    width: 170px;
+  }
+  .navbar .fa-shopping-basket {
+    margin-top: 10px;
+    display: none;
+    width: 100vw;
+    text-align: center;
+  }
+  .navbar .fa-search {
+    top: 4px;
   }
   .rules {
     margin: 10px auto;
   }
-  .side-menu ul li {
+  .side-menu, #product-menu {
+    display: none;
+  }
+  .side-menu ul li, #product-menu ul li {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 0;
@@ -208,18 +223,18 @@ a, a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .side-menu ul li i {
+  .side-menu ul li i, #product-menu ul li i {
     position: relative;
     left: 40px;
     top: -19px;
   }
-  .side-menu ul .submenu li {
+  .side-menu ul .submenu li, #product-menu ul .submenu li {
     padding-left: 0;
     padding-top: 5px;
     padding-bottom: 5px;
   }
   .carousel-inner {
-    margin-top: 27px;
+    margin-top: 15px;
   }
 }
 
