@@ -16,18 +16,19 @@
 
     <title>Marcin-Hurt</title>
 </head>
-<body onload="showNew()">
+<body id="all" onload="showNew()">
     <!-- top navbar -->
     <nav class="navbar navbar-light bg-light sticky-top">
         <a onclick="window.location.reload();" class="navbar-brand" href="#">
             <i class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
             <p>Hurtownia Marcina</p>
         </a>
-        <form class="form-inline" onSubmit="return false;">
+        <i class="fa fa-bars fa-2x hamburger" onclick="menuSlide()" aria-hidden="true"></i>
+        <form id="search-bar" class="form-inline" onSubmit="return false;">
             <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Wpisz nazwę produktu" aria-label="Search">
             <i id="search-icon" onclick="productSearch()" class="fa fa-search fa-2x"></i id>
         </form>
-        <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+        <i id="basket" class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
     </nav>
     
     <header>
@@ -58,7 +59,7 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         </ol>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" id="carousel1">
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="./images/storage.jpg" alt="First slide">
                             </div>

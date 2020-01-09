@@ -22,6 +22,25 @@ function hideAll() {
 
 // onclick 
 
+function menuSlide() {
+    const body = document.getElementById('all');
+    const carouselMargin = document.getElementById('carousel1');
+    const searchBar = document.getElementById('search-bar');
+    const basket = document.getElementById('basket'); 
+
+    if (body.style.top !== '0px') {
+        body.style.top = '0px';
+        carouselMargin.style.marginTop = '10px';
+        searchBar.style.display = 'block';
+        basket.style.display = 'block';
+    } else {
+        body.style.top = '-350px';
+        carouselMargin.style.marginTop = '27px';
+        searchBar.style.display = 'none';
+        basket.style.display = 'none';
+    }
+}
+
 function showNew() {
     hideAll();
     mainTitle.innerHTML = 'Nowości';

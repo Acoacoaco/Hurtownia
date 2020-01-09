@@ -1,3 +1,7 @@
+body {
+  min-width: 280px;
+}
+
 .navbar-brand p {
   margin: 3px 0 0 0;
 }
@@ -5,6 +9,10 @@
 .navbar-brand i {
   float: left;
   margin-right: 5px;
+}
+
+.hamburger {
+  display: none !important;
 }
 
 .bg-light {
@@ -177,8 +185,16 @@ a, a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
+  body {
     position: relative;
+    top: -350px;
+  }
+  .navbar .hamburger {
+    display: inline !important;
+  }
+  .navbar .form-inline, .navbar .fa-shopping-basket {
+    display: none;
+    width: 100vw;
   }
   .rules {
     margin: 10px auto;
@@ -203,23 +219,7 @@ a, a:hover {
     padding-bottom: 5px;
   }
   .carousel-inner {
-    margin-top: 10px;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-  .navbar .form-inline {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
-  .fa-search {
-    position: relative;
-    top: 5px;
+    margin-top: 27px;
   }
 }
 

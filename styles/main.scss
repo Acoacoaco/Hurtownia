@@ -2,6 +2,10 @@
 // @import "./navbar.scss";
 // @import "./product.scss";
 
+body {
+    min-width: 280px;
+}
+
 // navbar
 
 .navbar-brand {
@@ -12,6 +16,10 @@
         float: left;
         margin-right: 5px;
     }
+}
+
+.hamburger {
+    display: none !important;
 }
 
 .bg-light {
@@ -167,8 +175,20 @@ a, a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar {
+    body {
         position: relative;
+        top: -350px;
+    }
+    .navbar {
+        // position: relative;
+        .hamburger {
+            display: inline !important;
+        }
+        .form-inline, .fa-shopping-basket {
+            display: none;
+            width: 100vw;
+        }
+
     }
     .rules {
         margin: 10px auto;
@@ -195,23 +215,7 @@ a, a:hover {
     }
 
     .carousel-inner {
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 630px) {
-    .navbar {
-        display: block;
-        text-align: center;
-        .form-inline {
-            display: block;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-    }
-    .fa-search {
-        position: relative;
-        top: 5px;
+        margin-top: 27px;
     }
 }
 
