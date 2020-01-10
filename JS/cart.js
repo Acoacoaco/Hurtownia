@@ -1,0 +1,3 @@
+function addToCartClilked() {
+    alert();
+}

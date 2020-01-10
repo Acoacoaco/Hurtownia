@@ -1,13 +1,8 @@
-// import
-// @import "./navbar.scss";
-// @import "./product.scss";
-
 body {
     min-width: 280px;
 }
 
 // navbar
-
 .navbar-brand {
     p {
         margin: 3px 0 0 0;
@@ -85,7 +80,6 @@ header {
 }
 
 // main
-
 h2 {
     font-size: 300%;
     text-align: center;
@@ -97,17 +91,16 @@ a, a:hover {
     color: initial;
 }
 
-// navbar
+// // navbar
 
-.btn-outline-success {
-    color: #7ac229;
-    border-color: #7ac229;
-}
+// .btn-outline-success {
+//     color: #7ac229;
+//     border-color: #7ac229;
+// }
 
 
 
 // product
-
 .product {
     padding: 10px 10px 30px 10px;
     .product-card {
@@ -148,7 +141,6 @@ a, a:hover {
 }
 
 // footer
-
 .rules {
     margin: 70px auto;
     text-align: center;
@@ -174,9 +166,13 @@ a, a:hover {
     }
 }
 
+// media
 @media screen and (max-width: 768px) {
     header {
         margin-top: 0;
+    }
+    nav i:hover {
+        transform: none;
     }
     .navbar {
         .hamburger {
@@ -201,7 +197,6 @@ a, a:hover {
         .fa-search {
             top: 4px;
         }
-
     }
     .rules {
         margin: 10px auto;
@@ -228,7 +223,6 @@ a, a:hover {
             }
         }
     }
-
     .carousel-inner {
         margin-top: 15px;
     }
