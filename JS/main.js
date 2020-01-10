@@ -26,14 +26,14 @@ function menuSlide() {
     const sideMenu = document.getElementById('product-menu');
     const searchBar = document.getElementById('search-bar');
     const basket = document.getElementById('basket'); 
-    if (sideMenu.style.display == 'none') {
-        sideMenu.style.display = 'initial';
-        searchBar.style.display = 'block';
-        basket.style.display = 'inline-block';
-    } else {
+    if (sideMenu.style.display == 'initial') {
         sideMenu.style.display = 'none';
         searchBar.style.display = 'none';
         basket.style.display = 'none';
+    } else {
+        sideMenu.style.display = 'initial';
+        searchBar.style.display = 'block';
+        basket.style.display = 'inline-block';
     }
 }
 

@@ -212,6 +212,8 @@ a, a:hover {
     margin: 10px auto;
   }
   .side-menu, #product-menu {
+    position: fixed;
+    z-index: 99999;
     display: none;
   }
   .side-menu ul li, #product-menu ul li {
@@ -224,9 +226,8 @@ a, a:hover {
             flex-direction: column;
   }
   .side-menu ul li i, #product-menu ul li i {
-    position: relative;
-    left: 40px;
-    top: -19px;
+    padding-left: 0;
+    padding-top: 5px;
   }
   .side-menu ul .submenu li, #product-menu ul .submenu li {
     padding-left: 0;
