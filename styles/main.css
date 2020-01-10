@@ -195,6 +195,7 @@ a, a:hover {
     display: none;
     width: 100vw;
     text-align: center;
+    margin-bottom: 10px;
   }
   .navbar .form-inline #myInput {
     width: 170px;

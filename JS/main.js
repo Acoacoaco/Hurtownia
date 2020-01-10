@@ -8,6 +8,9 @@ const toysProducts = document.getElementsByClassName('toys');
 const gadgetsProducts = document.getElementsByClassName('gadgets');
 const mainTitle = document.getElementById('main-title');
 const formSubpage = document.getElementById('form');
+const sideMenu = document.getElementById('product-menu');
+const searchBar = document.getElementById('search-bar');
+const basket = document.getElementById('basket'); 
            
 // onload
 formSubpage.style.display = "none";
@@ -20,16 +23,17 @@ function hideAll() {
     }
 }
 
+function sideMenuHide() {
+    sideMenu.style.display = '';
+    searchBar.style.display = '';
+    basket.style.display = '';
+}
+
 // onclick 
 
 function menuSlide() {
-    const sideMenu = document.getElementById('product-menu');
-    const searchBar = document.getElementById('search-bar');
-    const basket = document.getElementById('basket'); 
     if (sideMenu.style.display == 'initial') {
-        sideMenu.style.display = 'none';
-        searchBar.style.display = 'none';
-        basket.style.display = 'none';
+        sideMenuHide();
     } else {
         sideMenu.style.display = 'initial';
         searchBar.style.display = 'block';
@@ -43,6 +47,8 @@ function showNew() {
     for (x=0; x < newProducts.length; x++) {
         newProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showPromo() {
@@ -51,6 +57,8 @@ function showPromo() {
     for (x=0; x < promoProducts.length; x++) {
         promoProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showAllProducts() {
@@ -58,6 +66,8 @@ function showAllProducts() {
     for (x=0; x < allProducts.length; x++) {
         allProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showMilitary() {
@@ -66,6 +76,8 @@ function showMilitary() {
     for (x=0; x < militaryProducts.length; x++) {
         militaryProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showToys() {
@@ -74,6 +86,8 @@ function showToys() {
     for (x=0; x < toysProducts.length; x++) {
         toysProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showGagets() {
@@ -82,12 +96,15 @@ function showGagets() {
     for (x=0; x < gadgetsProducts.length; x++) {
         gadgetsProducts[x].style.display = "";
     }
+    sideMenuHide();
+    window.scrollTo(0,0);
 }
 
 function showForm() {
     hideAll();
     mainTitle.innerHTML = 'Formularz zgłoszenia';
     formSubpage.style.display = "";
+    window.scrollTo(0,0);
 }
 
 // search
@@ -113,6 +130,7 @@ function productSearch() {
         li[i].style.display = "none";
       }
     }
+    window.scrollTo(0,0);
 }
 
 // enter key search
