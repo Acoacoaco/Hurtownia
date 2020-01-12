@@ -91,15 +91,6 @@ a, a:hover {
     color: initial;
 }
 
-// // navbar
-
-// .btn-outline-success {
-//     color: #7ac229;
-//     border-color: #7ac229;
-// }
-
-
-
 // product
 .product {
     padding: 10px 10px 30px 10px;
@@ -148,7 +139,10 @@ table {
     th, td {
         border-bottom: 2px solid lightgray;
     }
-
+    img {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 // footer

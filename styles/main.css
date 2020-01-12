@@ -161,6 +161,11 @@ table th, table td {
   border-bottom: 2px solid lightgray;
 }
 
+table img {
+  height: 100px;
+  width: 100px;
+}
+
 .rules {
   margin: 70px auto;
   text-align: center;

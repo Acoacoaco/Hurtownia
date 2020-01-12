@@ -22,6 +22,7 @@ function hideAll() {
     for (x=0; x < allProducts.length; x++) {
         allProducts[x].style.display = "none";
         formSubpage.style.display = "none";
+        cartTable.style.display = "none";
     }
 }
 
@@ -112,6 +113,7 @@ function showForm() {
 // search
 
 function productSearch() {
+    hideAll();
     showAllProducts();
     mainTitle.innerHTML = 'Nie mamy przedmiotu o takiej nazwie. <br> Szukaj dalej ;)';
     // Declare variables
