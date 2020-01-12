@@ -8,12 +8,14 @@ const toysProducts = document.getElementsByClassName('toys');
 const gadgetsProducts = document.getElementsByClassName('gadgets');
 const mainTitle = document.getElementById('main-title');
 const formSubpage = document.getElementById('form');
+const cartTable = document.getElementById('cartTable');
 const sideMenu = document.getElementById('product-menu');
 const searchBar = document.getElementById('search-bar');
 const basket = document.getElementById('basket'); 
            
 // onload
 formSubpage.style.display = "none";
+cartTable.style.display = "none";
 
 // JS functions
 function hideAll() {

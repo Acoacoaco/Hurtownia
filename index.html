@@ -28,7 +28,7 @@
             <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Szukaj produktu ..." aria-label="Search">
             <i id="search-icon" onclick="productSearch()" class="fa fa-search fa-2x"></i id>
         </form>
-        <i id="basket" class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+        <i id="basket" class="fa fa-shopping-basket fa-2x" onclick="showCart()" aria-hidden="true"></i>
     </nav>
     
     <header>
@@ -96,7 +96,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>9,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military new">
@@ -108,7 +108,7 @@
                             <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>89,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military new">
@@ -120,7 +120,7 @@
                             <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>39,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys promo">
@@ -132,7 +132,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>45,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product gadgets">
@@ -144,7 +144,7 @@
                             <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>859,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys new">
@@ -156,7 +156,7 @@
                             <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>9,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military promo">
@@ -168,7 +168,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>99,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys">
@@ -180,7 +180,7 @@
                             <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>99,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product gadgets">
@@ -192,7 +192,7 @@
                             <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>139,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys">
@@ -204,7 +204,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>199,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys">
@@ -216,7 +216,7 @@
                             <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>339,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military">
@@ -228,7 +228,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>99,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product toys">
@@ -240,7 +240,7 @@
                             <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>99,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product new gadgets">
@@ -252,7 +252,7 @@
                             <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>709,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military promo">
@@ -264,7 +264,7 @@
                             <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>79,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 product military promo">
@@ -276,7 +276,7 @@
                             <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>49,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
                 
@@ -289,7 +289,7 @@
                             <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h5>159,99 zł</h5>
-                        <button onclick="addToCartClilked()">Dodaj do koszyka</button>
+                        <button>Dodaj do koszyka</button>
                     </div>
                 </div>
             </div>
@@ -302,6 +302,45 @@
                         <p>Test formularza</p>
                         <p>Lorem                   ipsum, dolor sit amet consectetur adipisicing elit. Modi praesentium ratione, quaerat voluptatibus perspiciatis doloribus eos minus blanditiis. Labore soluta sapiente corrupti vero repudiandae, veniam in, velit quasi odit totam aliquid vel facilis temporibus. Dignissimos odio magnam possimus sed, voluptatum expedita numquam, impedit et ab, eligendi soluta sequi. Maiores, voluptates.</p>
                     </form>
+                </div>
+            </div>
+        </div>
+        <!-- Cart table -->
+        <div id="cartTable" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <table id="main-table">
+                        <tr>
+                            <td>
+                                Miniatura
+                            </td>
+                            <td>
+                                Nazwa
+                            </td>
+                            <td>
+                                Cena jednostkowa
+                            </td>
+                            <td>
+                                Liczba produktów
+                            </td>
+                            <td>
+                                Cena razem
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                SUMA
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                0,00 zł
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -353,6 +392,8 @@
         </div>
     </footer>
 
+    <!-- jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <!-- JS -->
     <script src="./JS/main.js"></script>
     <script src="./JS/cart.js"></script>

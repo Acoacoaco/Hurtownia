@@ -150,6 +150,17 @@ a, a:hover {
           transform: scale(1.05);
 }
 
+table {
+  width: 100%;
+  font-size: 120%;
+  text-align: center;
+  border-bottom: 2px solid lightgray;
+}
+
+table th, table td {
+  border-bottom: 2px solid lightgray;
+}
+
 .rules {
   margin: 70px auto;
   text-align: center;
