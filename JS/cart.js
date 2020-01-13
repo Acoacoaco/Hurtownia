@@ -9,19 +9,24 @@ function showCart() {
 
 // jQuery
 
-const $addToCartBtn = $('button');
+const $addToCartBtn = $('.add-button');
 
 $addToCartBtn.on('click', addToCart);
 function addToCart() {
-    alert('Dodano produkt do koszyka.');
+    // alert('Dodano produkt do koszyka.');
     const $imgSrc = $(this).prevAll('img')[0].src;
     const $name = $(this).prevAll('h6')[0].innerText;
     const $prise = $(this).prevAll('h5')[0].innerText;
-
-    const $itemsPrise = $prise.value + 1;
     
-    $('#main-table').append('<tr><td><img src="'+$imgSrc+'"/></td><td>'+$name+'</td><td>'+$prise+'</td><td>1</td><td>'+$itemsPrise+'</td></tr>')
-
+    $('#main-table').prepend('<tr><td><img src="'+$imgSrc+'"<br/><br/><input class="qty" type="number" value="1" aria-label="qty"></input> szt.</td><td><span class="added-name">'+$name+'</span><br/>'+$prise+'</td></tr>')
 }
+
+const $reccalculateBtn = $('#reccalculateBtn');
+$reccalculateBtn.on('click', calculateCart);
+function calculateCart() {
+    
+}
+
+
 
 // dodanie ilości produktów do ikony koszyka
