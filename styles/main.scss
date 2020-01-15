@@ -136,6 +136,7 @@ table {
     font-size: 150%;
     text-align: center;
     border-bottom: 2px solid lightgray;
+    margin-bottom: 30px;
     tr {
         border-top: 2px solid lightgray;
     }
@@ -151,9 +152,6 @@ table {
     }
     .added-name {
         font-weight: bold;
-    }
-    #reccalculateBtn {
-        margin: 5px 0;
     }
 }
 // hide arrows in input

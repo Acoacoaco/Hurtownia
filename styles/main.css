@@ -155,6 +155,7 @@ table {
   font-size: 150%;
   text-align: center;
   border-bottom: 2px solid lightgray;
+  margin-bottom: 30px;
 }
 
 table tr {
@@ -175,10 +176,6 @@ table .qty {
 
 table .added-name {
   font-weight: bold;
-}
-
-table #reccalculateBtn {
-  margin: 5px 0;
 }
 
 /* Chrome, Safari, Edge, Opera */
