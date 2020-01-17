@@ -13,7 +13,7 @@ const $addToCartBtn = $('.add-button');
 $addToCartBtn.on('click', addToCart);
 
 function addToCart() {
-    productsCounterIncrease();
+    // productsCounterIncrease();
     const $imgSrc = $(this).prevAll('img')[0].src;
     const $name = $(this).prevAll('h6')[0].innerText;
     const $h5 = $(this).prevAll('h5');
@@ -51,7 +51,7 @@ function  cartCalulator() {
 $("#main-table").on("click", ".fa-times", function() {
     $(this).closest("tr").remove();
     cartCalulator();
-    productsCounterDecrease();
+    // productsCounterDecrease();
    });
 
 // dodanie ilości produktów do ikony koszyka
