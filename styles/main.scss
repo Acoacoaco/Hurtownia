@@ -32,8 +32,23 @@ body {
     top: -1px;
 }
 
-nav i:hover {
+.fa-search:hover, .fa-share-square-o:hover, #cart:hover {
     transform: scale(1.5);
+}
+
+#products-number {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+    text-align: center;
+    line-height: .5;
+    width: 55px;
+    border-radius: 50%;
+    position: relative;
+    left: 32px;
+    top: -5px;
+    padding: 0 5px;
 }
 
 // header
@@ -147,11 +162,19 @@ table {
     }
     .qty {
         margin: 10px 0;
-        width: 30px;
+        width: 59px;
         text-align: center;
     }
     .added-name {
         font-weight: bold;
+    }
+    .fa-times {
+        color: red;
+        position: relative;
+        top: -70px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 // hide arrows in input

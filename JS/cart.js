@@ -13,37 +13,58 @@ const $addToCartBtn = $('.add-button');
 $addToCartBtn.on('click', addToCart);
 
 function addToCart() {
+    productsCounterIncrease();
     const $imgSrc = $(this).prevAll('img')[0].src;
     const $name = $(this).prevAll('h6')[0].innerText;
     const $h5 = $(this).prevAll('h5');
     var $prize = $h5.find('.product-prize')[0].innerText;
 
-    // console.log($imgSrc);
-    // console.log($('.cart-img'));
+    const $namesInTable = $('.added-name');
 
-    // if () {
-    //     alert('Ten produkt jest już w koszyku!');
-    // } else {
-    //     alert('Dodano produkt do koszyka.');
-        $('#main-table').prepend('<tr><td><img class="cart-img" src="'+$imgSrc+'"<br/><br/><input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input> szt.</td><td><span class="added-name">'+$name+'</span><br/>Cena 1 szt. to <span class="in-table-prize">'+$prize+'</span> zł</td></tr>');
-        cartCalulator();
-    // }
+    for (i = 0; i < $namesInTable.length; i ++ )
+        if ($name == $namesInTable[i].innerText) {
+            alert('Ten produkt jest już w koszyku! Nie możesz dodać ponownie tego samego produktu. Możesz zwiększyć liczbę zamawianych sztuk w koszyku.');
+            return;
+        } 
+    
+    // alert('Dodano produkt do koszyka.');
+    $('#main-table').prepend('<tr><td><img class="cart-img" src="'+$imgSrc+'"<br/><br/><input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input> szt.</td><td><span class="added-name">'+$name+'</span><br/><span class="in-table-prize">'+$prize+'</span> zł</td><td><i class="fa fa-times" aria-hidden="true"></i></td></tr>');
+    cartCalulator();
 }
 
 function  cartCalulator() {
     // calculate carts
-    let $sum = 0;
+    let $total = 0;
     const $qtyInTable = $('.qty');
     const $prizesInTable = $('.in-table-prize');
     for (i = 0; i < $prizesInTable.length; i++) {
         if (isNaN($qtyInTable[i].value) || $qtyInTable[i].value < 1) {
             $qtyInTable[i].value = 1;
         } 
-        $sum = +$sum + (+$prizesInTable[i].innerText * +$qtyInTable[i].value);
+        $total = +$total + (+$prizesInTable[i].innerText * +$qtyInTable[i].value);
     }
-    $sum = Math.round($sum*100)/100;
-    $('#sum').text('SUMA ZAMÓWIENIA: '+$sum+' zł');
+    $total = Math.round($total*100)/100;
+    $('#total').text('SUMA ZAMÓWIENIA: '+$total+' zł');
 }
 
-// te same produkty - produkt już w koszyku
+// remove
+$("#main-table").on("click", ".fa-times", function() {
+    $(this).closest("tr").remove();
+    cartCalulator();
+    productsCounterDecrease();
+   });
+
 // dodanie ilości produktów do ikony koszyka
+// let $productsNumber = $('#products-number').text();
+
+// function productsCounterIncrease() {
+//     $('#products-number').text(+$productsNumber +1);
+//     // return $productsNumber;
+// }
+
+// function productsCounterDecrease() {
+//     $productsNumber = +$productsNumber -1;
+//     return $productsNumber;
+// }
+
+// console.log($productsNumber)

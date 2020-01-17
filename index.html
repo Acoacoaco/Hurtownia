@@ -19,7 +19,7 @@
 <body onload="showNew()">
     <!-- top navbar -->
     <nav class="navbar navbar-light bg-light sticky-top">
-        <a onclick="window.location.reload();" class="navbar-brand" href="#">
+        <a onclick="showNew()" class="navbar-brand" href="#">
             <i class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
             <p>Hurtownia Marcina</p>
         </a>
@@ -28,7 +28,9 @@
             <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Szukaj produktu ..." aria-label="Search">
             <i id="search-icon" onclick="productSearch()" class="fa fa-search fa-2x"></i id>
         </form>
+        <div id="cart"><span id="products-number">0</span>
         <i id="basket" class="fa fa-shopping-basket fa-2x" onclick="showCart()" aria-hidden="true"></i>
+        </div>
     </nav>
     
     <header>
@@ -102,7 +104,7 @@
                 <div class="col-6 col-sm-4 col-md-3 product military new">
                     <div class="product-card">
                         <img src="./images/airsoft.jpg" alt="zdjęcie produktu">
-                        <h6 class="product-name">Karabin ASG</h6>
+                        <h6 class="product-name">Replika ASG</h6>
                         <p>ASG New Poland</p>
                         <div class="progress">
                             <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -314,8 +316,11 @@
                             <td>
                                 
                             </td>
-                            <td id="sum">
+                            <td id="total">
                                 SUMA ZAMÓWIENIA: 0.00 zł
+                            </td>
+                            <td>
+                                
                             </td>
                         </tr>
                     </table>

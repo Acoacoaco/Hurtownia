@@ -30,9 +30,24 @@ body {
   top: -1px;
 }
 
-nav i:hover {
+.fa-search:hover, .fa-share-square-o:hover, #cart:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+#products-number {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 90%;
+  text-align: center;
+  line-height: .5;
+  width: 55px;
+  border-radius: 50%;
+  position: relative;
+  left: 32px;
+  top: -5px;
+  padding: 0 5px;
 }
 
 header {
@@ -170,12 +185,22 @@ table img {
 
 table .qty {
   margin: 10px 0;
-  width: 30px;
+  width: 59px;
   text-align: center;
 }
 
 table .added-name {
   font-weight: bold;
+}
+
+table .fa-times {
+  color: red;
+  position: relative;
+  top: -70px;
+}
+
+table .fa-times:hover {
+  cursor: pointer;
 }
 
 /* Chrome, Safari, Edge, Opera */
