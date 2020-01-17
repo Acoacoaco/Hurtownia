@@ -33,20 +33,21 @@ body {
 .fa-search:hover, .fa-share-square-o:hover, #cart:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+  cursor: pointer;
 }
 
 #products-number {
   background-color: red;
   color: white;
   font-weight: bold;
-  font-size: 90%;
+  font-size: 70%;
   text-align: center;
   line-height: .5;
   width: 55px;
   border-radius: 50%;
   position: relative;
-  left: 32px;
-  top: -5px;
+  left: 21px;
+  top: 8px;
   padding: 0 5px;
 }
 
@@ -248,7 +249,7 @@ input[type=number] {
   header {
     margin-top: 0;
   }
-  nav i:hover {
+  .fa-search:hover, .fa-share-square-o:hover, #cart:hover {
     -webkit-transform: none;
             transform: none;
   }
@@ -264,11 +265,16 @@ input[type=number] {
   .navbar .form-inline #myInput {
     width: 170px;
   }
-  .navbar .fa-shopping-basket {
-    margin-top: 10px;
+  .navbar #cart {
     display: none;
-    width: 100vw;
-    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .navbar #products-number {
+    right: 300px;
+  }
+  .navbar .fa-shopping-basket {
+    margin-right: 19px;
   }
   .navbar .fa-search {
     top: 4px;

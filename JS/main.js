@@ -11,7 +11,7 @@ const formSubpage = document.getElementById('form');
 const cartTable = document.getElementById('cartTable');
 const sideMenu = document.getElementById('product-menu');
 const searchBar = document.getElementById('search-bar');
-const basket = document.getElementById('basket'); 
+const cart = document.getElementById('cart'); 
            
 // onload
 formSubpage.style.display = "none";
@@ -29,7 +29,7 @@ function hideAll() {
 function sideMenuHide() {
     sideMenu.style.display = '';
     searchBar.style.display = '';
-    basket.style.display = '';
+    cart.style.display = '';
 }
 
 // onclick 
@@ -40,7 +40,7 @@ function menuSlide() {
     } else {
         sideMenu.style.display = 'initial';
         searchBar.style.display = 'block';
-        basket.style.display = 'inline-block';
+        cart.style.display = 'inline-block';
     }
 }
 

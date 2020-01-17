@@ -13,7 +13,6 @@ const $addToCartBtn = $('.add-button');
 $addToCartBtn.on('click', addToCart);
 
 function addToCart() {
-    // productsCounterIncrease();
     const $imgSrc = $(this).prevAll('img')[0].src;
     const $name = $(this).prevAll('h6')[0].innerText;
     const $h5 = $(this).prevAll('h5');
@@ -27,7 +26,8 @@ function addToCart() {
             return;
         } 
     
-    // alert('Dodano produkt do koszyka.');
+    productsCounterIncrease();
+    alert('Dodano produkt do koszyka.');
     $('#main-table').prepend('<tr><td><img class="cart-img" src="'+$imgSrc+'"<br/><br/><input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input> szt.</td><td><span class="added-name">'+$name+'</span><br/><span class="in-table-prize">'+$prize+'</span> zł</td><td><i class="fa fa-times" aria-hidden="true"></i></td></tr>');
     cartCalulator();
 }
@@ -51,20 +51,18 @@ function  cartCalulator() {
 $("#main-table").on("click", ".fa-times", function() {
     $(this).closest("tr").remove();
     cartCalulator();
-    // productsCounterDecrease();
+    productsCounterDecrease();
    });
 
-// dodanie ilości produktów do ikony koszyka
-// let $productsNumber = $('#products-number').text();
+// products counter
+function productsCounterIncrease() {
+    let $productsNumber = $('#products-number').text();
+    $('#products-number').text(+$productsNumber+1);
+    return $productsNumber;
+}
 
-// function productsCounterIncrease() {
-//     $('#products-number').text(+$productsNumber +1);
-//     // return $productsNumber;
-// }
-
-// function productsCounterDecrease() {
-//     $productsNumber = +$productsNumber -1;
-//     return $productsNumber;
-// }
-
-// console.log($productsNumber)
+function productsCounterDecrease() {
+    let $productsNumber = $('#products-number').text();
+    $('#products-number').text(+$productsNumber-1);
+    return $productsNumber;
+}
