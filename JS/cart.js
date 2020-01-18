@@ -8,7 +8,6 @@ function showCart() {
 }
 
 // jQuery
-
 const $addToCartBtn = $('.add-button');
 $addToCartBtn.on('click', addToCart);
 
