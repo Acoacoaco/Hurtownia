@@ -70,6 +70,7 @@ function productsCounterDecrease() {
 }
 
 // hide/show order btn
+$('#order-btn')[0].style.display = 'none'; 
 function hideShowOrderBtn() {
     if ($('#products-number').text() == 0) {
         $('#order-btn')[0].style.display = 'none';
