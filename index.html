@@ -302,8 +302,19 @@
             <div class="row">
                 <div class="col-12">
                     <form>
-                        <p>Test formularza</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi praesentium ratione, quaerat voluptatibus perspiciatis doloribus eos minus blanditiis. Labore soluta sapiente corrupti vero repudiandae, veniam in, velit quasi odit totam aliquid vel facilis temporibus. Dignissimos odio magnam possimus sed, voluptatum expedita numquam, impedit et ab, eligendi soluta sequi. Maiores, voluptates.</p>
+                        Imię:<br>
+                        <input type="text" name="firstname" placeholder="np. Jan" required><br><br>
+                        Nazwisko:<br>
+                        <input type="text" name="lastname" placeholder="np. Kowalski" required><br><br>
+                        Email:<br>
+                        <input type="email" name="mail" placeholder="np. kowalski@email.com" required><br><br>
+                        Telefon:<br>
+                        <input type="tel" name="phone" placeholder="np. 500 123 456" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required><br><br>
+                        Nr zamówienia:<br>
+                        <input type="number" name="order-num" placeholder="np. 123/2020"><br><br>
+                        Treść zgłoszenia:<br>
+                        <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia." required></textarea><br><br>
+                        <button id="send-btn" type="submit" class="send-btn">Wyslij</button>
                     </form>
                 </div>
             </div>
@@ -325,6 +336,7 @@
                             </td>
                         </tr>
                     </table>
+                    <button id="order-btn" class="send-btn">Złóż zamówienie</button>
                 </div>
             </div>
         </div>

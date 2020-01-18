@@ -58,11 +58,22 @@ $("#main-table").on("click", ".fa-times", function() {
 function productsCounterIncrease() {
     let $productsNumber = $('#products-number').text();
     $('#products-number').text(+$productsNumber+1);
+    hideShowOrderBtn();
     return $productsNumber;
 }
 
 function productsCounterDecrease() {
     let $productsNumber = $('#products-number').text();
     $('#products-number').text(+$productsNumber-1);
+    hideShowOrderBtn();
     return $productsNumber;
+}
+
+// hide/show order btn
+function hideShowOrderBtn() {
+    if ($('#products-number').text() == 0) {
+        $('#order-btn')[0].style.display = 'none';
+    } else {
+        $('#order-btn')[0].style.display = ''; 
+    }
 }

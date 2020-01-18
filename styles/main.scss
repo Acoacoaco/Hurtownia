@@ -52,6 +52,12 @@ body {
     padding: 0 5px;
 }
 
+.send-btn {
+    font-size: 170%;
+    width: 100%;
+    height: 50px;
+}
+
 // header
 header {
     margin-top: 15px;
@@ -191,7 +197,24 @@ input[type=number] {
   -moz-appearance:textfield;
 }
 
+#order-btn {
+    display: none;
+}
+
+// form
+form {
+    text-align: center;
+    #notification {
+        width: 100%;
+        height: 250px;
+    }
+}
+
 // footer
+footer {
+    margin-top: 15px;
+}
+
 .rules {
     margin: 70px auto;
     text-align: center;

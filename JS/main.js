@@ -146,3 +146,14 @@ input.addEventListener('keyup', function(event) {
    document.getElementById('search-icon').click();
   }
 });
+
+// send form
+
+// // hide form
+// $('#send-btn').on('click', function() {
+//     formSubpage.style.display = "none";
+//     mainTitle.innerHTML = 'Dziękujemy za wysłanie zgłoszenia';
+//     window.scrollTo(0,0);
+// });
+
+
