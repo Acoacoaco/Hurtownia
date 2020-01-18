@@ -222,6 +222,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+#order-btn {
+  display: none;
+}
+
 form {
   text-align: center;
 }
