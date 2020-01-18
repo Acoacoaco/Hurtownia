@@ -25,7 +25,7 @@
         </a>
         <i class="fa fa-bars fa-2x hamburger" onclick="menuSlide()" aria-hidden="true"></i>
         <form id="search-bar" class="form-inline" onSubmit="return false;">
-            <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Szukaj produktu ..." aria-label="Search">
+            <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Szukaj produktu..." aria-label="Search">
             <i id="search-icon" onclick="productSearch()" class="fa fa-search fa-2x"></i id>
         </form>
         <div onclick="showCart()" id="cart">
@@ -313,7 +313,7 @@
                         Nr zamówienia:<br>
                         <input type="number" name="order-num" placeholder="np. 123/2020"><br><br>
                         Treść zgłoszenia:<br>
-                        <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia." required></textarea><br><br>
+                        <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia..." required></textarea><br><br>
                         <button id="send-btn" type="submit" class="send-btn">Wyslij</button>
                     </form>
                 </div>
@@ -329,7 +329,7 @@
                                 
                             </td>
                             <td id="total">
-                                SUMA ZAMÓWIENIA: 0.00 zł
+                                SUMA ZAMÓWIENIA: 0 zł
                             </td>
                             <td>
                                 
@@ -389,7 +389,7 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- JS -->
     <script src="./JS/main.js"></script>
     <script src="./JS/cart.js"></script>
