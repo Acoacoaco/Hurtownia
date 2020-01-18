@@ -28,7 +28,23 @@ function addToCart() {
     
     productsCounterIncrease();
     alert('Dodano produkt do koszyka.');
-    $('#main-table').prepend('<tr><td><img class="cart-img" src="'+$imgSrc+'"<br/><br/><input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input> szt.</td><td><span class="added-name">'+$name+'</span><br/><span class="in-table-prize">'+$prize+'</span> zł</td><td><i class="fa fa-times" aria-hidden="true"></i></td></tr>');
+    $('#main-table').prepend(`
+    <tr>
+        <td>
+            <img class="cart-img" src="${$imgSrc}">
+        </td>
+        <td>
+            <span class="added-name">${$name}</span><br/>
+            <span class="in-table-prize">${$prize}</span>
+             zł * 
+            <input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input>
+            szt. = ${$prize} zł
+        </td>
+        <td>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </td>
+    </tr>
+    `);
     cartCalulator();
 }
 

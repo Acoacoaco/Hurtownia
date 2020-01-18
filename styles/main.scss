@@ -155,7 +155,7 @@ a, a:hover {
 // cartTable
 table {
     width: 100%;
-    font-size: 150%;
+    font-size: 3vw;
     text-align: center;
     border-bottom: 2px solid lightgray;
     margin-bottom: 30px;
@@ -163,13 +163,13 @@ table {
         border-top: 2px solid lightgray;
     }
     img {
-        margin-top: 15px;
+        margin: 5px 0;
         height: 100px;
         width: 100px;
     }
     .qty {
         margin: 10px 0;
-        width: 58px;
+        width: 8%;
         text-align: center;
     }
     .added-name {
@@ -178,7 +178,7 @@ table {
     .fa-times {
         color: red;
         position: relative;
-        top: -70px;
+        top: -43px;
         &:hover {
             cursor: pointer;
         }
@@ -272,6 +272,11 @@ footer {
             top: 4px;
         }
     }
+
+    // table {
+    //     font-size: 100%;
+    // }
+
     .rules {
         margin: 10px auto;
     }
@@ -303,6 +308,10 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
+    // table {
+    //     font-size: 50%;
+    // }
+    
     .lower-footer {
         .help, .shipping, .kontakt {
             margin-bottom: 50px;
