@@ -26,7 +26,7 @@ function addToCart() {
         } 
     
     productsCounterIncrease();
-    alert('Dodano produkt do koszyka.');
+    alert('Produkt dodano do koszyka.');
     $('#main-table').prepend(`
     <tr>
         <td>

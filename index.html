@@ -33,7 +33,6 @@
         <i id="basket" class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
         </div>
     </nav>
-    
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -87,6 +86,9 @@
         </div>
     </header>
     <main>
+        <!-- dialogs -->
+        <dialog id="add-to-cart-clicked">Dodano produkt do koszyka.</dialog>
+
         <h2 id="main-title"></h2>
         <div class="container">
             <div class="row" id="all-products">
@@ -117,7 +119,7 @@
                 <div class="col-6 col-sm-4 col-md-3 product military new">
                     <div class="product-card">
                         <img src="./images/airsoft2.jpg" alt="zdjęcie produktu">
-                        <h6 class="product-name">Kamuflarz leśny</h6>
+                        <h6 class="product-name">Kamuflaż leśny</h6>
                         <p>Promoc Camo</p>
                         <div class="progress">
                             <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -303,17 +305,17 @@
                 <div class="col-12">
                     <form>
                         Imię:<br>
-                        <input type="text" name="firstname" placeholder="np. Jan" required><br><br>
+                        <input type="text" name="firstname" placeholder="np. Jan"><br><br>
                         Nazwisko:<br>
-                        <input type="text" name="lastname" placeholder="np. Kowalski" required><br><br>
+                        <input type="text" name="lastname" placeholder="np. Kowalski"><br><br>
                         Email:<br>
-                        <input type="email" name="mail" placeholder="np. kowalski@email.com" required><br><br>
+                        <input type="email" name="mail" placeholder="np. kowalski@email.com"><br><br>
                         Telefon:<br>
-                        <input type="tel" name="phone" placeholder="np. 500 123 456" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" required><br><br>
+                        <input type="tel" name="phone" placeholder="np. 500 123 456" pattern="[0-9]{3} [0-9]{3} [0-9]{3}"><br><br>
                         Nr zamówienia:<br>
                         <input type="number" name="order-num" placeholder="np. 123/2020"><br><br>
                         Treść zgłoszenia:<br>
-                        <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia..." required></textarea><br><br>
+                        <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia..."></textarea><br><br>
                         <button id="send-btn" type="submit" class="send-btn">Wyslij</button>
                     </form>
                 </div>
