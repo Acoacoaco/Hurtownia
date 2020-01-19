@@ -174,7 +174,7 @@ a, a:hover {
 
 table {
   width: 100%;
-  font-size: 3vw;
+  font-size: 150%;
   text-align: center;
   border-bottom: 2px solid lightgray;
   margin-bottom: 30px;
@@ -297,6 +297,9 @@ footer {
   }
   .navbar .fa-search {
     top: 4px;
+  }
+  table {
+    font-size: 4.2vw;
   }
   .rules {
     margin: 10px auto;

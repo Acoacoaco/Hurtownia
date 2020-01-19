@@ -37,7 +37,7 @@ function addToCart() {
             <span class="in-table-prize">${$prize}</span>
              zł * 
             <input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input>
-            szt. = ${$prize} zł
+            szt. = <span class="sum">${$prize}</span> zł
         </td>
         <td>
             <i class="fa fa-times" aria-hidden="true"></i>
@@ -52,14 +52,18 @@ function  cartCalulator() {
     let $total = 0;
     const $qtyInTable = $('.qty');
     const $prizesInTable = $('.in-table-prize');
+    let $sum = 0;
     for (i = 0; i < $prizesInTable.length; i++) {
         if (isNaN($qtyInTable[i].value) || $qtyInTable[i].value < 1) {
             $qtyInTable[i].value = 1;
         } 
-        $total = +$total + (+$prizesInTable[i].innerText * +$qtyInTable[i].value);
+        $sum = +$prizesInTable[i].innerText * +$qtyInTable[i].value;
+        $sum = Math.round($sum*100)/100;
+        $('.sum')[i].innerText = $sum.toFixed(2);
+        $total = $total + $sum;
     }
     $total = Math.round($total*100)/100;
-    $('#total').text('SUMA ZAMÓWIENIA: '+$total+' zł');
+    $('#total').text(`SUMA ZAMÓWIENIA: ${$total.toFixed(2)} zł`);
 }
 
 // remove
