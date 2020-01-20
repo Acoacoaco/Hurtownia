@@ -21,7 +21,7 @@ function addToCart() {
 
     for (i = 0; i < $namesInTable.length; i ++ )
         if ($name == $namesInTable[i].innerText) {
-            alert('Ten produkt jest już w koszyku! Nie możesz dodać ponownie tego samego produktu. Możesz zwiększyć liczbę zamawianych sztuk w koszyku.');
+            alert('Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.');
             return;
         } 
     
@@ -51,11 +51,15 @@ function  cartCalulator() {
     // calculate carts
     let $total = 0;
     const $qtyInTable = $('.qty');
+    
     const $prizesInTable = $('.in-table-prize');
     let $sum = 0;
     for (i = 0; i < $prizesInTable.length; i++) {
         if (isNaN($qtyInTable[i].value) || $qtyInTable[i].value < 1) {
             $qtyInTable[i].value = 1;
+        } 
+        if ($qtyInTable[i].value % 1 !== 0) {
+            $qtyInTable[i].value = Math.round($qtyInTable[i].value);
         } 
         $sum = +$prizesInTable[i].innerText * +$qtyInTable[i].value;
         $sum = Math.round($sum*100)/100;
