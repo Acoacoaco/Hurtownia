@@ -19,14 +19,15 @@ function addToCart() {
 
     const $namesInTable = $('.added-name');
 
-    for (i = 0; i < $namesInTable.length; i ++ )
+    for (i = 0; i < $namesInTable.length; i ++ ) {
         if ($name == $namesInTable[i].innerText) {
+            // $addToCartBtn[i].attr('data-target', '#myModal2'); - przełączenie value of property po pierwszym kliknięciu
             alert('Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.');
             return;
-        } 
+        }
+    } 
     
     productsCounterIncrease();
-    alert('Produkt dodano do koszyka.');
     $('#main-table').prepend(`
     <tr>
         <td>
