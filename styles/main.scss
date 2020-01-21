@@ -239,6 +239,7 @@ footer {
 
 // modals
 .modal-content {
+    z-index: 3;
     top: 30vh;
 }
 .modal-p {
@@ -290,7 +291,7 @@ footer {
     }
     .side-menu, #product-menu {
         position: fixed;
-        z-index: 99999;
+        z-index: 2;
         display: none;
         ul {
             li {
