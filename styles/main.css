@@ -264,6 +264,10 @@ footer {
   text-align: center;
 }
 
+.modal-p {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
   header {
     margin-top: 0;

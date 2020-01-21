@@ -94,7 +94,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <p>Produkt dodano do koszyka!</p>
+                        <p class="modal-p"></p>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <p>Ten produkt jest już w koszyku!<br/><br/>Nie możesz dodać ponownie tego samego produktu.<br/>Możesz zwiększyć liczbę zamawianych sztuk w koszyku.</p>
+                        <p>Dziekujemy za wysłanie zgłoszenia!</p>
+                        <p>Dołożymy wszelkich starań, aby rozwiązać zgłoszony problem w możliwie jak najkrótszym czasie.</p>
                     </div>
                 </div>
             </div>
@@ -339,7 +340,7 @@
                         <input type="number" name="order-num" placeholder="np. 123/2020"><br><br>
                         Treść zgłoszenia:<br>
                         <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia..."></textarea><br><br>
-                        <button id="send-btn" type="submit" class="send-btn">Wyslij</button>
+                        <button id="send-btn" class="send-btn" data-toggle="modal" data-target="#myModal2">Wyslij</button>
                     </form>
                 </div>
             </div>

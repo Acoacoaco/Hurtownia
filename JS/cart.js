@@ -16,13 +16,13 @@ function addToCart() {
     const $name = $(this).prevAll('h6')[0].innerText;
     const $h5 = $(this).prevAll('h5');
     var $prize = $h5.find('.product-prize')[0].innerText;
-
     const $namesInTable = $('.added-name');
+
+    $('.modal-p')[0].innerText = 'Produkt dodano do koszyka!';
 
     for (i = 0; i < $namesInTable.length; i ++ ) {
         if ($name == $namesInTable[i].innerText) {
-            // $addToCartBtn[i].attr('data-target', '#myModal2'); - przełączenie value of property po pierwszym kliknięciu
-            alert('Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.');
+            $('.modal-p')[0].innerText = 'Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.';
             return;
         }
     } 
