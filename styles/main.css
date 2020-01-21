@@ -264,6 +264,10 @@ footer {
   text-align: center;
 }
 
+.modal-content {
+  top: 30vh;
+}
+
 .modal-p {
   margin-bottom: 0;
 }
