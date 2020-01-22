@@ -12,9 +12,9 @@ const $addToCartBtn = $('.add-button');
 $addToCartBtn.on('click', addToCart);
 
 function addToCart() {
-    const $imgSrc = $(this).prevAll('img')[0].src;
-    const $name = $(this).prevAll('h6')[0].innerText;
-    const $h5 = $(this).prevAll('h5');
+    const $imgSrc = $(this).prev('div').find('img')[0].src;
+    const $name = $(this).prev('div').find('.product-name')[0].innerText;
+    const $h5 = $(this).prev('div').find('h5');
     var $prize = $h5.find('.product-prize')[0].innerText;
     const $namesInTable = $('.added-name');
 
