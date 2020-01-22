@@ -266,7 +266,7 @@ footer {
 }
 
 .modal-content {
-  z-index: 3;
+  z-index: 17;
   top: 30vh;
 }
 
@@ -321,7 +321,7 @@ footer {
   }
   .side-menu, #product-menu {
     position: fixed;
-    z-index: 2;
+    z-index: 16;
     display: none;
   }
   .side-menu ul li, #product-menu ul li {

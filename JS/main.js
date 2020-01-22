@@ -29,9 +29,17 @@ function hideAll() {
 
 function menuSlide() {
     if ($('.hamburger').css('display') == 'block') {
-        $('#search-bar').slideToggle();
-        $('#cart').slideToggle();
-        $('#product-menu').slideToggle();
+        $('#search-bar').slideToggle(200);
+        $('#cart').slideToggle(200);
+        $('#product-menu').slideToggle(200);
+    }
+}
+
+function slideUp() {
+    if ($('.hamburger').css('display') == 'block') {
+        $('#search-bar').slideUp(200);
+        $('#cart').slideUp(200);
+        $('#product-menu').slideUp(200);
     }
 }
 
