@@ -9,7 +9,6 @@ const gadgetsProducts = document.getElementsByClassName('gadgets');
 const mainTitle = document.getElementById('main-title');
 const formSubpage = document.getElementById('form');
 const cartTable = document.getElementById('cartTable');
-// const sideMenu = document.getElementById('product-menu');
 const searchBar = document.getElementById('search-bar');
 const cart = document.getElementById('cart'); 
            
@@ -26,30 +25,14 @@ function hideAll() {
     }
 }
 
-// function sideMenuHide() {
-
-//     // sideMenu.slideToggle();
-    
-//     // sideMenu.style.display = '';
-//     // searchBar.style.display = '';
-//     // cart.style.display = '';
-// }
-
 // onclick 
 
 function menuSlide() {
-    // if (sideMenu.style.display == 'initial') {
-    //     sideMenuHide();
-    // } else {
-    //     sideMenu.style.display = 'initial';
-    //     searchBar.style.display = 'block';
-    //     cart.style.display = 'inline-block';
-    // }
-
-    $('#search-bar').slideToggle();
-    $('#cart').slideToggle();
-    $('#product-menu').slideToggle();
-
+    if ($('.hamburger').css('display') == 'block') {
+        $('#search-bar').slideToggle();
+        $('#cart').slideToggle();
+        $('#product-menu').slideToggle();
+    }
 }
 
 function showNew() {
@@ -58,7 +41,6 @@ function showNew() {
     for (x=0; x < newProducts.length; x++) {
         newProducts[x].style.display = "";
     }
-    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -73,6 +55,7 @@ function showPromo() {
 }
 
 function showAllProducts() {
+    hideAll();
     mainTitle.innerHTML = 'Wszystkie produkty';
     for (x=0; x < allProducts.length; x++) {
         allProducts[x].style.display = "";
