@@ -9,7 +9,7 @@ const gadgetsProducts = document.getElementsByClassName('gadgets');
 const mainTitle = document.getElementById('main-title');
 const formSubpage = document.getElementById('form');
 const cartTable = document.getElementById('cartTable');
-const sideMenu = document.getElementById('product-menu');
+// const sideMenu = document.getElementById('product-menu');
 const searchBar = document.getElementById('search-bar');
 const cart = document.getElementById('cart'); 
            
@@ -26,22 +26,30 @@ function hideAll() {
     }
 }
 
-function sideMenuHide() {
-    sideMenu.style.display = '';
-    searchBar.style.display = '';
-    cart.style.display = '';
-}
+// function sideMenuHide() {
+
+//     // sideMenu.slideToggle();
+    
+//     // sideMenu.style.display = '';
+//     // searchBar.style.display = '';
+//     // cart.style.display = '';
+// }
 
 // onclick 
 
 function menuSlide() {
-    if (sideMenu.style.display == 'initial') {
-        sideMenuHide();
-    } else {
-        sideMenu.style.display = 'initial';
-        searchBar.style.display = 'block';
-        cart.style.display = 'inline-block';
-    }
+    // if (sideMenu.style.display == 'initial') {
+    //     sideMenuHide();
+    // } else {
+    //     sideMenu.style.display = 'initial';
+    //     searchBar.style.display = 'block';
+    //     cart.style.display = 'inline-block';
+    // }
+
+    $('#search-bar').slideToggle();
+    $('#cart').slideToggle();
+    $('#product-menu').slideToggle();
+
 }
 
 function showNew() {
@@ -50,7 +58,7 @@ function showNew() {
     for (x=0; x < newProducts.length; x++) {
         newProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -60,7 +68,7 @@ function showPromo() {
     for (x=0; x < promoProducts.length; x++) {
         promoProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -69,7 +77,7 @@ function showAllProducts() {
     for (x=0; x < allProducts.length; x++) {
         allProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -79,7 +87,7 @@ function showMilitary() {
     for (x=0; x < militaryProducts.length; x++) {
         militaryProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -89,7 +97,7 @@ function showToys() {
     for (x=0; x < toysProducts.length; x++) {
         toysProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -99,7 +107,7 @@ function showGagets() {
     for (x=0; x < gadgetsProducts.length; x++) {
         gadgetsProducts[x].style.display = "";
     }
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 
@@ -146,14 +154,3 @@ input.addEventListener('keyup', function(event) {
    document.getElementById('search-icon').click();
   }
 });
-
-// send form
-
-// // hide form
-// $('#send-btn').on('click', function() {
-//     formSubpage.style.display = "none";
-//     mainTitle.innerHTML = 'Dziękujemy za wysłanie zgłoszenia';
-//     window.scrollTo(0,0);
-// });
-
-

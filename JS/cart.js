@@ -3,7 +3,7 @@ function showCart() {
     mainTitle.innerHTML = 'Twoje zamówienie:';
     formSubpage.style.display = "none";
     cartTable.style.display = "";
-    sideMenuHide();
+    menuSlide();
     window.scrollTo(0,0);
 }
 

@@ -241,6 +241,10 @@ footer {
 .modal-content {
     z-index: 3;
     top: 30vh;
+    .close {
+        position: relative;
+        top: -6px;
+    }
 }
 .modal-p {
     margin-bottom: 0;

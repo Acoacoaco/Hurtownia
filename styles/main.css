@@ -270,6 +270,11 @@ footer {
   top: 30vh;
 }
 
+.modal-content .close {
+  position: relative;
+  top: -6px;
+}
+
 .modal-p {
   margin-bottom: 0;
 }
