@@ -172,6 +172,10 @@ a, a:hover {
           transform: scale(1.05);
 }
 
+.product .product-card .description {
+  display: none;
+}
+
 table {
   width: 100%;
   font-size: 150%;
@@ -277,6 +281,14 @@ footer {
 
 .modal-p {
   margin-bottom: 0;
+}
+
+#myModal3 .modal-body {
+  text-align: center;
+}
+
+#myModal3 .modal-body img {
+  width: 200px;
 }
 
 @media screen and (max-width: 768px) {
