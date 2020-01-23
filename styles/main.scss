@@ -243,12 +243,18 @@ footer {
 // modals
 .modal-content {
     z-index: 17;
-    top: 30vh;
     .close {
         position: relative;
         top: -6px;
     }
 }
+#myModal1, #myModal2 {
+    top: 30vh;
+}
+#myModal3 {
+    top: 10vh;
+}
+
 .modal-p {
     margin-bottom: 0;
 }

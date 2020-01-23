@@ -30,10 +30,12 @@ function getDetails() {
             </div>
         </div>
     </div>
-    `)
+    `);
+
+    // remove details from $myModal3
+    $('#myModal3').on('hidden.bs.modal', function () {
+        $('#myModal3').find('.modal-content').empty();
+    });
 }
-
-// remove details from $myModal3
-
 
 // console.log($details.children);
