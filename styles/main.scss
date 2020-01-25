@@ -152,6 +152,11 @@ a, a:hover {
         .description {
             display: none;
         }
+        .details {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 

@@ -176,6 +176,10 @@ a, a:hover {
   display: none;
 }
 
+.product .product-card .details:hover {
+  cursor: pointer;
+}
+
 table {
   width: 100%;
   font-size: 150%;
