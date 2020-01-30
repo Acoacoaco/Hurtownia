@@ -7,46 +7,47 @@ function showCart() {
     window.scrollTo(0,0);
 }
 
-// jQuery
-const $addToCartBtn = $('.add-button');
-$addToCartBtn.on('click', addToCart);
+$(document).ready(function() { 
+    // jQuery
+    const $addToCartBtn = $('.add-button');
+    $addToCartBtn.on('click', addToCart);
 
-function addToCart() {
-    const $imgSrc = $(this).prev('div').find('img')[0].src;
-    const $name = $(this).prev('div').find('.product-name')[0].innerText;
-    const $h5 = $(this).prev('div').find('h5');
-    var $prize = $h5.find('.product-prize')[0].innerText;
-    const $namesInTable = $('.added-name');
+    function addToCart() {
+        const $imgSrc = $(this).prev('div').find('img')[0].src;
+        const $name = $(this).prev('div').find('.product-name')[0].innerText;
+        const $h5 = $(this).prev('div').find('h5');
+        var $prize = $h5.find('.product-prize')[0].innerText;
+        const $namesInTable = $('.added-name');
+        $('.modal-p')[0].innerText = 'Produkt dodano do koszyka!';
 
-    $('.modal-p')[0].innerText = 'Produkt dodano do koszyka!';
-
-    for (i = 0; i < $namesInTable.length; i ++ ) {
-        if ($name == $namesInTable[i].innerText) {
-            $('.modal-p')[0].innerText = 'Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.';
-            return;
-        }
-    } 
-    
-    productsCounterIncrease();
-    $('#main-table').prepend(`
-    <tr>
-        <td>
-            <img class="cart-img" src="${$imgSrc}">
-        </td>
-        <td>
-            <span class="added-name">${$name}</span><br/>
-            <span class="in-table-prize">${$prize}</span>
-             zł * 
-            <input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input>
-            szt. = <span class="sum">${$prize}</span> zł
-        </td>
-        <td>
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </td>
-    </tr>
-    `);
-    cartCalulator();
-}
+        for (i = 0; i < $namesInTable.length; i ++ ) {
+            if ($name == $namesInTable[i].innerText) {
+                $('.modal-p')[0].innerText = 'Ten produkt jest już w koszyku!\n\nNie możesz dodać ponownie tego samego produktu.\nMożesz zwiększyć liczbę zamawianych sztuk w koszyku.';
+                return;
+            }
+        } 
+        
+        productsCounterIncrease();
+        $('#main-table').prepend(`
+        <tr>
+            <td>
+                <img class="cart-img" src="${$imgSrc}">
+            </td>
+            <td>
+                <span class="added-name">${$name}</span><br/>
+                <span class="in-table-prize">${$prize}</span>
+                zł * 
+                <input class="qty" type="number" value="1" onchange="cartCalulator()" aria-label="qty"></input>
+                szt. = <span class="sum">${$prize}</span> zł
+            </td>
+            <td>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </td>
+        </tr>
+        `);
+        cartCalulator();
+    }
+});
 
 function  cartCalulator() {
     // calculate carts
@@ -76,7 +77,7 @@ $("#main-table").on("click", ".fa-times", function() {
     $(this).closest("tr").remove();
     cartCalulator();
     productsCounterDecrease();
-   });
+});
 
 // products counter
 function productsCounterIncrease() {
