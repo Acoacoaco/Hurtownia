@@ -1,0 +1,20 @@
+[   
+    {
+        "type":"gadgets promo",
+        "imgSrc":"./images/shield.jpg", 
+        "name":"Szkło hartowane", 
+        "brand":"Hard Shield", 
+        "qty":25, 
+        "description":"Szkło hartowane dolor sit amet consectetur adipisicing elit. Sunt soluta atque corporis, tempora iste veritatis nam. Dicta id quam suscipit vel. Atque sed reiciendis quidem!", 
+        "prize":9.99   
+    },
+    {
+        "type":"military new",
+        "imgSrc":"./images/airsoft.jpg", 
+        "name":"Replika ASG", 
+        "brand":"ASG New Poland", 
+        "qty":75, 
+        "description":"Nasz replika ASG dolor sit amet consectetur adipisicing elit. Quas illo veritatis dicta beatae nobis excepturi quaerat modi quidem tempora quo. Perferendis, a?", 
+        "prize":89.99   
+    }
+]
