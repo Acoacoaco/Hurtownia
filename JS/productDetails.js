@@ -1,15 +1,14 @@
 const $details = $('.details');
 $details.on('click', getDetails)
 
+// show details
 function getDetails() {
-
     const $imgSrc = $(this).children('img')[0].src;
     const $name = $(this).children('.product-name')[0].innerText;
     const $brand = $(this).children('.brand')[0].innerText;
     const $description = $(this).children('.description')[0].innerText;
     const $h5 = $(this).children('h5');
     var $prize = $h5.find('.product-prize')[0].innerText;
-
 
     $('#myModal3').find('.modal-content').append(`
     <div class="modal-header">
@@ -37,5 +36,3 @@ function getDetails() {
         $('#myModal3').find('.modal-content').empty();
     });
 }
-
-// console.log($details.children);

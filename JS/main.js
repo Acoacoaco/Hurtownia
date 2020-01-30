@@ -1,5 +1,4 @@
 // varaibles
-
 const allProducts = document.getElementsByClassName('product');
 const newProducts = document.getElementsByClassName('new');
 const promoProducts = document.getElementsByClassName('promo');
@@ -26,7 +25,6 @@ function hideAll() {
 }
 
 // onclick 
-
 function menuSlide() {
     if ($('.hamburger').css('display') == 'block') {
         $('#search-bar').slideToggle(200);
@@ -110,7 +108,6 @@ function showForm() {
 }
 
 // search
-
 function productSearch() {
     hideAll();
     showAllProducts();
@@ -137,7 +134,6 @@ function productSearch() {
 }
 
 // enter key search
-
 var input = document.getElementById('myInput');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
