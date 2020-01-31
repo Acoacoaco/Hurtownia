@@ -52,6 +52,15 @@ function showNew() {
     window.scrollTo(0,0);
 }
 
+$(document).ready(function showNew() {
+    hideAll();
+    mainTitle.innerHTML = 'Nowości';
+    for (x=0; x < newProducts.length; x++) {
+        newProducts[x].style.display = "";
+    }
+    window.scrollTo(0,0);
+})
+
 function showPromo() {
     hideAll();
     mainTitle.innerHTML = 'Promocje';

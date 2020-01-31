@@ -16,5 +16,140 @@
         "qty":75, 
         "description":"Nasz replika ASG dolor sit amet consectetur adipisicing elit. Quas illo veritatis dicta beatae nobis excepturi quaerat modi quidem tempora quo. Perferendis, a?", 
         "prize":89.99   
+    },
+    {
+        "type":"military new",
+        "imgSrc":"./images/airsoft2.jpg", 
+        "name":"Kamuflaż leśny", 
+        "brand":"Pro Camo", 
+        "qty":100, 
+        "description":"Najlepszy kamuflaż dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":39.99   
+    },
+    {
+        "type":"toys promo",
+        "imgSrc":"./images/teddy.jpg", 
+        "name":"Przytulanka, miś", 
+        "brand":"Give Love", 
+        "qty":25, 
+        "description":"Miś-przytulana dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":45.99   
+    },
+    {
+        "type":"gadgets",
+        "imgSrc":"./images/vr.jpg", 
+        "name":"Okulary VR", 
+        "brand":"PS5", 
+        "qty":50, 
+        "description":"Super okulary VR ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":859.99   
+    },
+    {
+        "type":"toys new",
+        "imgSrc":"./images/watergun.jpg", 
+        "name":"Tuba wodna", 
+        "brand":"WaterFun Toys", 
+        "qty":100, 
+        "description":"Najlepsza zabawa ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":9.99   
+    },
+    {
+        "type":"military promo",
+        "imgSrc":"./images/airsoft3.jpg", 
+        "name":"Karabin ASG", 
+        "brand":"Shots", 
+        "qty":25, 
+        "description":"Karabin ASG ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":99.99   
+    },
+    {
+        "type":"product toys",
+        "imgSrc":"./images/barbie.jpg", 
+        "name":"Lalka Barbie", 
+        "brand":"Barbie", 
+        "qty":75, 
+        "description":"Barbie ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":99.99   
+    },
+    {
+        "type":"gadgets",
+        "imgSrc":"./images/manlyman.jpg", 
+        "name":"Akcesoria męskie", 
+        "brand":"Man man man", 
+        "qty":50, 
+        "description":"Zestaw akcesoriów ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":139.99   
+    },
+    {
+        "type":"toys",
+        "imgSrc":"./images/tricycle.jpg", 
+        "name":"Rower trójkołowy", 
+        "brand":"Ride with Us", 
+        "qty":25, 
+        "description":"Bezpieczny rower trójkołowy ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":199.99   
+    },
+    {
+        "type":"toys",
+        "imgSrc":"./images/water-balloons2.jpg", 
+        "name":"Kula wodna", 
+        "brand":"WaterFun", 
+        "qty":50, 
+        "description":"Kula wodna ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":339.99   
+    },
+    {
+        "type":"military",
+        "imgSrc":"./images/war.jpg", 
+        "name":"Raca sygnałowa", 
+        "brand":"AmuNation", 
+        "qty":25, 
+        "description":"Wysokiej jakości raca sygnałowa ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":49.99   
+    },
+    {
+        "type":"toys",
+        "imgSrc":"./images/blocks.jpg", 
+        "name":"Klocki plastikowe", 
+        "brand":"Bro Blocks", 
+        "qty":50, 
+        "description":"Zestaw klocków plastikowych ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":99.99   
+    },
+    {
+        "type":"new gadgets",
+        "imgSrc":"./images/drone.jpg", 
+        "name":"Dron latający", 
+        "brand":"Fly Word", 
+        "qty":100, 
+        "description":"Super nowoczesny dron latający dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":709.99   
+    },
+    {
+        "type":"military promo",
+        "imgSrc":"./images/airsoft4.jpg", 
+        "name":"Luneta do snajperki", 
+        "brand":"ASG Poland", 
+        "qty":50, 
+        "description":"Luneta do snajperki ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":79.99   
+    },
+    {
+        "type":"military promo",
+        "imgSrc":"./images/camouflage.jpg", 
+        "name":"Magazynek zapasowy", 
+        "brand":"AmuNation", 
+        "qty":25, 
+        "description":"Zapasowy magazynek ipsum dolor sit amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":39.99   
+    },
+    {
+        "type":"gadgets new",
+        "imgSrc":"./images/wristwatch.jpg",
+        "name":"Zegarek męski", 
+        "brand":"Elegance", 
+        "qty":75, 
+        "description":"Zegarek męski amet consectetur adipisicing elit. A quia numquam facere nostrum, impedit at possimus nemo voluptate labore, aspernatur deserunt optio sint eum incidunt accusantium.", 
+        "prize":189.99   
     }
 ]
