@@ -8,7 +8,7 @@
        $orderNumber = $_POST['order-num'];
        $notification = $_POST['notification'];
 
-       $mailTo = "wiazewicz@gmail.com";
+       $mailTo = "aleksander.wiazewicz@usz.edu.pl";
        $headers = "From: $mail";
        $emailTxt = "Dane zamawiającego: $firstName $firstName. \n\n".
        "Telefon kontaktowy: $phone. \n\n".
