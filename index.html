@@ -137,7 +137,7 @@
         <div id="form" class="container">
             <div class="row">
                 <div class="col-12">
-                    <form>
+                    <form action="contact-form.php" method="POST">
                         Imię:<br>
                         <input type="text" name="firstname" placeholder="np. Jan"><br><br>
                         Nazwisko:<br>
@@ -150,7 +150,7 @@
                         <input type="number" name="order-num" placeholder="np. 123/2020"><br><br>
                         Treść zgłoszenia:<br>
                         <textarea id="notification" name="notification" placeholder="Tutaj wpisz tekst zgłoszenia..."></textarea><br><br>
-                        <button id="send-btn" class="send-btn" data-toggle="modal" data-target="#myModal2">Wyslij</button>
+                        <button id="send-btn" type="submit" name="submit" class="send-btn" data-toggle="modal" data-target="#myModal2">Wyslij</button>
                     </form>
                 </div>
             </div>
@@ -198,14 +198,14 @@
                 <div class="col-sm-4 help">
                     <h6>Pomoc</h6>
                     <p>W przypadku wszelkich problemów z zamówniem prosimy o kontakt telefoniczny lub poprzez formularz kontaktowy.</p>
-                    <a href="#" onclick="showForm()"><p>Formularz</p></a>
+                    <a href="#" onclick="showForm()"><p>==&gt Formularz &lt==</p></a>
                 </div>
                 <!-- regulaminy -->
                 <section id="shipping"></section>
                 <div class="col-sm-4 shipping">
                     <h6>Dostawa</h6>
                     <p>Szanowny Kliencie, wysyłki dokonujemy w możliwie najkrótszym czasie, po otrzyaniu wpłaty. Przed dokonaniem zakupu prosimy o zapoznanie się z regulaminem sklepu.</p>
-                    <a href="./Regulamin sklepu internetowego.txt" target="blank"><p>Link do regulaminu</p></a>
+                    <a href="./Regulamin sklepu internetowego.txt" target="blank"><p>==&gt Link do regulaminu &lt==</p></a>
                 </div>
                 <!-- kontakt, tel, facebook, -->
                 <section id="contact"></section>

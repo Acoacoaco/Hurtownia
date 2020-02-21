@@ -1,0 +1,18 @@
+form {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+td:nth-child(6) {
+  width: 50vw;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=storageStyles.css.map */
